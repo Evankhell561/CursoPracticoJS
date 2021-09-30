@@ -73,3 +73,58 @@ function areaCirculo(radio){
 
 
 console.groupEnd();
+
+//aqui interactuamos con HTML
+function calcularPerimetroCuadrado() {
+    const input = document.getElementById("inputCuadrado");
+    const lado = parseInt(input.value);
+    const perimetro = perimetroCuadrado(lado);
+    // alert(perimetro);
+    alert("El perimetro del cuadrado es: " + perimetro + "cm");
+}
+
+function calcularAreaCuadrado() {
+    const input = document.getElementById("inputCuadrado");
+    const lado = parseInt(input.value);
+    const area = areaCuadrado(lado);
+    // alert(area);
+    alert("el area del cuadrado es: " + area + "cm^2");
+}
+
+function calcularPerimetroTriangulo() {
+    const input1 = document.getElementById("inputTriangulo1");
+    const input2 = document.getElementById("inputTriangulo2");
+    const input3 = document.getElementById("inputTriangulo3");
+    const lado1 = parseInt(input1.value);
+    const lado2 = parseInt(input2.value);
+    const base = parseInt(input3.value);
+    const perimetro = perimetroTriangulo(lado1, lado2, base);
+    // alert(perimetro);
+    alert("El perimetro del triangulo es: " + perimetro + "cm");
+}
+
+function calcularAreaTriangulo() {
+    const input1 = document.getElementById("inputTriangulo3");
+    const input2 = document.getElementById("inputAlturaTriangulo");
+    const base = parseInt(input1.value);
+    const altura = parseInt(input2.value);
+    const area = areaTriangulo(base, altura);
+    // alert(area);
+    alert("el area del triangulo es: " + area + "cm^2");
+}
+
+function calcularPerimetroCirculo() {
+    const input = document.getElementById("inputCirculo");
+    const radio = parseInt(input.value);
+    const perimetro = perimetroCirculo(radio);
+    // alert(perimetro);
+    alert("El perimetro del circulo es: " + perimetro + "cm");
+}
+
+function calcularAreaCirculo() {
+    const input = document.getElementById("inputCirculo");
+    const radio = parseInt(input.value);
+    const area = areaCirculo(radio);
+    // alert(area);
+    alert("El area del circulo es: " + area + "cm^2");
+}
