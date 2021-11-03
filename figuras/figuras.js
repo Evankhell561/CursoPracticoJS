@@ -45,6 +45,26 @@ function areaTriangulo(base, altura){
     return (base * altura) / 2
 }
 
+function formulaAlturaTriangulo(lado, base) {
+    return Math.sqrt(lado * lado - (base * base/4));
+}
+
+function alturaTrianguloIsoceles(lado1, lado2, lado3) {
+    altura = null;
+    if((lado1 == lado2) && lado1 != lado3) {
+        altura = formulaAlturaTriangulo(lado1, lado3);
+    }
+    else if(lado1 == lado3 && lado1 != lado2) {
+        altura = formulaAlturaTriangulo(lado1, lado2);
+    }
+    else if(lado2 == lado3 && lado2 != lado1) {
+        altura = formulaAlturaTriangulo(lado2, lado1);
+    }
+    else {
+        alert("El triangulo debe ser isoceles");
+    }
+    return altura;
+}
 
 
  console.groupEnd();
@@ -127,4 +147,16 @@ function calcularAreaCirculo() {
     const area = areaCirculo(radio);
     // alert(area);
     alert("El area del circulo es: " + area + "cm^2");
+}
+
+function calcularAlturaTrianguloIsoceles() {
+    const input1 = document.getElementById("inputTriangulo1");
+    const input2 = document.getElementById("inputTriangulo2");
+    const input3 = document.getElementById("inputTriangulo3");
+    const lado1 = parseInt(input1.value);
+    const lado2 = parseInt(input2.value);
+    const lado3 = parseInt(input3.value);
+    const altura = alturaTrianguloIsoceles(lado1, lado2, lado3);
+    // alert(altura);
+    alert("La altura del triangulo es: " + altura + "cm");
 }
