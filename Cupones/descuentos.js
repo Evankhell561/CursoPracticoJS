@@ -6,9 +6,9 @@ const coupons = {
 };
 
 function calcularPrecioConDescuento(precio, cupon) {
-    var descuento = coupons[cupon];
+    const descuento = coupons[cupon];
     if(typeof descuento === "undefined") {
-        descuento = 0;
+        return precio;
     }
     const porcentajePrecioDescuento = 100 - descuento;
     const precioDescuento = precio * porcentajePrecioDescuento / 100;

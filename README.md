@@ -12,3 +12,9 @@ este es un repositorio para el curso practico de js en platzi
 -segundo paso: implementar las formulas en JS
 -tercer paso: crear funciones.
 -cuarto paso: integrar JS con html
+
+# taller #3 promedio, mediana y moda
+-primer paso: definir las formulas
+-segundo paso: implementar las formulas en JS
+-tercer paso: crear funciones.
+-cuarto paso: integrar JS con html
